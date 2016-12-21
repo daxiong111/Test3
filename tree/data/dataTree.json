@@ -1,0 +1,103 @@
+{
+    "resultObj": [
+        {
+        "children":[{
+            "expanded":"false",
+            "id":"RF02",
+            "leaf":true,
+            "text":"武汉分公司",
+            "type":"companyRF27"
+        },
+        {	
+            "expanded":"false",
+            "id":"RF03",
+            "leaf":true,
+            "text":"杭州分公司",
+            "type":"companyRF27"
+        }],
+        "url":"survey.html",
+        "expanded":false,
+        "id":"RF27",
+        "isLeaf":"",
+        "text":"停车场概况",
+        "type":"RF27company"
+        },
+        
+        {
+        "children":[{
+            "expanded":"false",
+            "id":"RF02",
+            "leaf":true,
+            "text":"武汉分公司",
+            "type":"companyRF27"
+        },
+        {
+            "expanded":"false",
+            "id":"RF03",
+            "leaf":true,
+            "text":"杭州分公司",
+            "type":"companyRF27"
+        }],
+        "url":"current.html",
+        "expanded":false,
+        "id":"RF27",
+        "isLeaf":"",
+        "text":"实时状态",
+        "type":"RF27company"
+        },
+        
+        {
+        "url":"manager.html",
+        "children":[{
+            "expanded":"false",
+            "id":"temp",
+            "leaf":true,
+            "text":"临停车管理",
+            "type":"text"
+        },
+        
+        {
+        	"url":"unusual.html",
+            "expanded":"false",
+            "id":"black",
+            "leaf":true,
+            "text":"异常收费",
+            "type":"black"
+        }],
+        "url":"manager.html",
+        "expanded":false,
+        "id":"RF27",
+        "isLeaf":"",
+        "text":"车场管理",
+        "type":"RF17company"
+        },
+        
+        
+        {
+        "children":[{
+            "expanded":"false",
+            "id":"free",
+            "leaf":true,
+            "text":"免费车报表",
+            "type":"free27"
+        },
+        {
+            "expanded":"false",
+            "id":"long",
+            "leaf":true,
+            "text":"长期车报表",
+            "type":"long"
+        }],
+        "url":"statistics.html",
+        "expanded":false,
+        "id":"report",
+        "isLeaf":"",
+        "text":"报表管理",
+        "type":"report"
+        }
+    ],
+    "message": {
+        "errorCode": "200",
+        "errorDsc": "success！"
+    }
+}
