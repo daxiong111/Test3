@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>表格checkbox选择框</title>
+	<link rel="stylesheet" type="text/css" href="css/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="css/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+</head>
+<body>
+	<h2>表格checkbox选择框</h2>
+	<p>Click the checkbox on header to select or unselect all selections.</p>
+	<div style="margin:20px 0;"></div>
+	<table id="dg" class="easyui-datagrid" title="easyi表格选择框" style="width:700px;height:250px"
+			data-options="rownumbers:true,singleSelect:true,url:'data/datagrid_data1.json',method:'get'">
+		<thead>
+			<tr>
+				<th data-options="field:'ck',checkbox:true"></th>
+				<th data-options="field:'itemid',width:80">Item ID</th>
+				<th data-options="field:'productid',width:100">Product</th>
+				<th data-options="field:'listprice',width:80,align:'right'">List Price</th>
+				<th data-options="field:'unitcost',width:80,align:'right'">Unit Cost</th>
+				<th data-options="field:'attr1',width:220">Attribute</th>
+				<th data-options="field:'status',width:60,align:'center'">Status</th>
+			</tr>
+		</thead>
+	</table>
+	<div style="margin:10px 0;">
+		<span>Selection Mode: </span>
+		<select onchange="$('#dg').datagrid({singleSelect:(this.value==0)})">
+			<option value="0">Single Row</option>
+			<option value="1">Multiple Rows</option>
+		</select><br/>
+		SelectOnCheck: <input type="checkbox" checked onchange="$('#dg').datagrid({selectOnCheck:$(this).is(':checked')})"><br/>
+		CheckOnSelect: <input type="checkbox" checked onchange="$('#dg').datagrid({checkOnSelect:$(this).is(':checked')})"><br/>
+		<button onclick="getChecked()">获取选中行信息</button>
+	</div>
+	<script type="text/javascript">
+      $.extend($.fn.datagrid.methods, {
+        getRowNum:function(jq){
+          var opts=$.data(jq[0],"datagrid").options;
+          var array = new Array();
+          opts.finder.getTr(jq[0],"","selected",1).each(function(){
+            array.push($(this).find("td.datagrid-td-rownumber").text());
+          });
+          return array.join(",");
+        }
+      });
+		function getChecked(){
+		  alert(123);
+          var selDatas = $('#dg').datagrid('getChecked');
+          console.log(selDatas);//获取选中当前行的数据
+          var datas = $('#dg').datagrid('getSelections');
+          console.log(datas);//获取选中当前行的所有数据
+          var rows = $('#dg').datagrid("getRows");
+          console.log(rows);//获取所以表格数据
+          var row = $('#dg').datagrid('getRowNum');
+          console.log(row);//获取选中行的行号
+		}
+	</script>
+</body>
+</html>

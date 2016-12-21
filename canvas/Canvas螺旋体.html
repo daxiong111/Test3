@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas螺旋体</title>
+</head>
+<body>
+<canvas id="canvas" width="300px" height="300px"style="border:1px solid black" ></canvas>
+<input type="button" value="开始" id="btn">
+<script>
+    var canvas=document.getElementById("canvas");
+    var context=canvas.getContext("2d");
+    var btn=document.getElementById("btn");
+    btn.onclick=function(){
+        //初始化的第一个矩形
+        context.translate(150,30);
+        context.scale(0.95,0.95);
+        context.fillStyle="blue";
+        context.globalAlpha=0.5
+        context.fillRect(0,0,100,50);
+
+        for(var i=0;i<50;i++){
+            //上述设置重新绘制
+            context.translate(25,10);
+            context.scale(0.95,0.95);
+            context.rotate(Math.PI/15);
+            context.fillRect(0,0,100,50);
+        }
+    }
+</script>
+</body>
+</html>

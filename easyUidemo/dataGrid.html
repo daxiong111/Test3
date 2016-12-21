@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <link rel="stylesheet" type="text/css" href="css/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="css/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+</head>
+<body>
+<h2>表格table</h2>
+<p>You can append some buttons to the standard datagrid pager bar.</p>
+<div style="margin:20px 0;"></div>
+<table id="dg" title="Custom DataGrid Pager" style="width:700px;height:250px"
+       data-options="rownumbers:true,singleSelect:true,pagination:true,url:'data/datagrid_data1.json',method:'get'">
+    <thead>
+    <tr>
+        <th data-options="field:'itemid',width:80,align:'center'">Item ID</th>
+        <th data-options="field:'productid',width:100,align:'center'">Product</th>
+        <th data-options="field:'listprice',width:80,align:'center'">List Price</th>
+        <th data-options="field:'unitcost',width:80,align:'center'">Unit Cost</th>
+        <th data-options="field:'attr1',width:240,align:'center'">Attribute</th>
+        <th data-options="field:'status',width:60,align:'center'">Status</th>
+    </tr>
+    </thead>
+</table>
+<script type="text/javascript">
+  $(function(){
+    var pager = $('#dg').datagrid().datagrid('getPager');	// get the pager of datagrid
+    pager.pagination({
+      buttons:[{
+        iconCls:'icon-search',
+        handler:function(){
+          alert('search111');
+        }
+      },{
+        iconCls:'icon-add',
+        handler:function(){
+          alert('add111');
+        }
+      },{
+        iconCls:'icon-edit',
+        handler:function(){
+          alert('edit111');
+        }
+      }]
+    });
+  })
+</script>
+</body>
+</html>
+</body>
+</html>
