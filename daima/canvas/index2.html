@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Canvas线性渐变 </title>
+    <meta charset="utf-8" />
+</head>
+<body>
+<canvas id = "canvas" width="300px" height="300px"  ></canvas>
+<script>
+    var canvas=document.getElementById("canvas");
+    var context=canvas.getContext("2d");
+    //1、设置渐变返回对象
+    var grad = context.createLinearGradient(0,0,canvas.width,canvas.height);
+    //2、设置渐变的颜色
+    grad.addColorStop(0,"red");
+    grad.addColorStop(0.3,"yellow");
+    grad.addColorStop(0.55,"green");
+    grad.addColorStop(0.75,"grey")
+    grad.addColorStop(1,"blue");
+    //3、设置填充样式为线性渐变
+    context.fillStyle=grad;
+    //4、绘制图形
+    context.fillRect(0,0,canvas.width,canvas.height);
+
+</script>
+</body>
+</html>

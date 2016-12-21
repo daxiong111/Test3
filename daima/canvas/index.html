@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas元素</title>
+</head>
+<body>
+<canvas id = "canvas1" width="300px" height="300px" style="background:blue" ></canvas>
+<canvas id = "canvas2" width="300px" height="300px" style="background:pink" ></canvas>
+<script type="text/javascript">
+    var canvas1 = document.getElementById("canvas1");
+    var canvas2 = document.getElementById("canvas2");
+    var context1 = canvas1.getContext("2d");
+    var context2=canvas2.getContext("2d");
+    context1.fillRect(100,100,100,100);
+    context2.fillRect(100,100,100,100);
+</script>
+</body>
+</html>

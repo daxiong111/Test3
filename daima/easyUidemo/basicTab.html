@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tabs鼠标移动触发事件</title>
+    <link rel="stylesheet" type="text/css" href="css/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="css/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+</head>
+<body>
+<h2>Hover Tabs</h2>
+<p>移动鼠标触发tab.</p>
+<div style="margin:20px 0;"></div>
+<div id="tt" class="easyui-tabs" style="width:700px;height:300px">
+    <div title="首页" style="padding:10px">
+        <p style="font-size:14px">jQuery EasyUI framework helps you build your web pages easily.</p>
+        <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, animi consequatur distinctio dolorem ducimus eligendi explicabo facere illo ipsa iste itaque, laudantium maiores nihil pariatur quaerat quod reiciendis repudiandae tempore!</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, aliquid aperiam consectetur fuga inventore maiores mollitia nemo rem temporibus veritatis! Assumenda atque dignissimos eligendi expedita impedit itaque magni mollitia sint!</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cum, delectus deleniti distinctio earum, facilis, incidunt ipsa libero maxime nihil nobis numquam obcaecati porro provident quidem reiciendis rerum tempore temporibus!</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolor doloremque error fuga fugit inventore magni tenetur vitae? Dolor eveniet impedit laudantium nam numquam obcaecati quam quisquam repellat repellendus veritatis?</li>
+            <li>easyui save your time and scales while developing your products.</li>
+            <li>easyui is very easy but powerful.</li>
+        </ul>
+    </div>
+    <div title="菜单" style="padding:10px">
+        <ul class="easyui-tree" data-options="url:'data/tree_data1.json',method:'get',animate:true"></ul>
+    </div>
+    <div title="帮助" data-options="iconCls:'icon-help',closable:true" style="padding:10px">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto consectetur cupiditate in ipsam maxime nisi repudiandae sunt tempore? Accusantium aut cum deserunt fuga maxime nesciunt odit quo soluta, voluptates..
+    </div>
+</div>
+<h1>表单验证</h1>
+<div class="easyui-panel" title="表单验证" style="width:400px;padding:10px 60px 20px 60px">
+    <table cellpadding="5">
+        <tr>
+            <td>姓名:</td>
+            <td><input class="easyui-validatebox textbox" data-options="prompt:'Enter User Name.',required:true,validType:'length[3,10]'"></td>
+        </tr>
+        <tr>
+            <td>邮箱:</td>
+            <td><input class="easyui-validatebox textbox" data-options="prompt:'Enter a valid email.',required:true,validType:'email'"></td>
+        </tr>
+        <tr>
+            <td>出生日期:</td>
+            <td><input class="easyui-datebox"></td>
+        </tr>
+        <tr>
+            <td>网址:</td>
+            <td><input class="easyui-validatebox textbox" data-options="prompt:'Enter your URL.',required:true,validType:'url'"></td>
+        </tr>
+        <tr>
+            <td>电话:</td>
+            <td><input class="easyui-validatebox textbox" data-options="prompt:'Enter your phone number.',required:true"></td>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript">
+    $(function(){
+        var tabs = $('#tt').tabs().tabs('tabs');
+        for(var i=0; i<tabs.length; i++){
+            tabs[i].panel('options').tab.unbind().bind('mouseenter',{index:i},function(e){
+                $('#tt').tabs('select', e.data.index);
+            });
+        }
+    });
+</script>
+</body>
+</html>
