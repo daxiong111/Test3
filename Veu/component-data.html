@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>组件——关于data</title>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="example-2">
+			<simple-counter></simple-counter>
+			<simple-counter></simple-counter>
+			<simple-counter></simple-counter>
+		</div>
+		<script type="text/javascript">
+			// 注册
+			var data ={counter:0}
+			Vue.component('simple-counter', {
+			  template: '<button v-on:click="counter+=1">{{counter}}</button>',
+			  data:function(){
+			  	return data
+//			  	return{
+//			  		 counter:0
+//			  	}
+			  }
+			})
+			// 创建根实例
+			new Vue({
+			  el: '#example-2'
+			})
+		</script>
+	</body>
+</html>

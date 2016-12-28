@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>表单控件绑定Value</title>
+		<script src="js/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="app-0">
+			<!-- 当选中时，`picked` 为字符串 "a" -->
+			<input type="radio" v-model="picked"  v-bind:value="a">
+			<p>{{picked}}</p>
+		</div>
+		
+			
+		
+		<div id="app-1" >
+			<div v-for="item in items">	
+			<!-- `toggle` 为 true 或 false -->
+			<input type="checkbox" v-model="item.state" @click="getStatus(item)">
+			<span>状态：{{item.state}}</span>
+		</div></div>
+		<div id="app-2">
+			<!-- 当选中时，`selected` 为字符串 "abc" -->
+			<select v-model="selected">
+			    <!-- 内联对象字面量 -->
+			  <option v-bind:value="{ number: 123 }">123</option>
+			</select>
+		</div>
+		 
+	 <script type="text/javascript">
+		var app0 = new Vue({
+			el:"#app-0",
+			data:{
+				a:"a",
+				picked:""
+			}
+		})
+		var app1 = new Vue({
+			el:"#app-1",
+			data:function(){
+				return {
+					items:[{
+						state:false
+					},{
+						state:true
+					}]
+				};
+			},
+			methods:{
+				getStatus:function(item){
+					item.state = !item.state;
+				}
+			}
+		})
+	 </script>
+	</body>
+</html>

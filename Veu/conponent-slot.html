@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>使用slot分发内容</title>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+	</head>
+	<body>
+    <div id="app">
+        <my-component></my-component>
+        <my-component>
+            <p>This is some original content</p>
+            <p>This is some more original content</p>
+        </my-component>
+    </div>
+
+    <template id="MyComponent">
+        <div>
+            <h1>This is my component!</h1>
+            <slot>
+                如果没有分发内容则显示我。
+            </slot>
+        </div>
+    </template>
+
+<script type="text/javascript">
+    var vm=new Vue({
+        el:"#app",
+        components:{
+            "my-component":{
+                template:"#MyComponent"
+            }
+        }
+    })
+</script>
+	</body>
+</html>

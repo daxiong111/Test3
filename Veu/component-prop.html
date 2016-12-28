@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/vue.min.js"></script>
+        <title>vue的props实现数据传递</title>
+    </head>
+    <body>
+    <!--<div id="app1">
+        <child msg="hello!"></child>
+    </div>
+        <script>
+            Vue.config.debug = true;
+            Vue.component('child',{
+                props: ['msg'],   //VUE实例中myMessage 等价于my-message
+                template: '<span>{{msg}}</span>'
+            });
+            var vm = new Vue({
+                el: '#app1'
+            });
+        </script>-->
+        
+    <div id="app1">
+		<child msg="hello123!"></child>
+		<child nihao="hello312!"></child>
+		<child nisha="hello231!"></child>
+	</div>
+	<script>
+	Vue.config.debug = true;
+	Vue.component('child', {
+		// declare the props
+		props: ['msg','nihao','nisha'],
+		// the prop can be used inside templates, and will also
+		// be set as `this.msg`
+		template: '<span>123{{msg}}{{nihao}}{{nisha}}</span>',
+			/*data: function() {
+				return {
+	 				msg: 'boy'
+				}
+			}*/
+	});
+	var vm = new Vue({
+		el: '#app1'
+	})
+	</script>
+    </body>
+
+    </html>

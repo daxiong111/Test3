@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>表单控件绑定</title>
+		<script src="js/vue.min.js"></script>
+		<style type="text/css">
+			div{
+				height: 70px;
+			}
+		</style>
+	</head>
+	<body>
+	<!-- v-model在表单控件元素上实现数据的双向绑定 -->
+		<div id="app-1">
+			<input type="text" v-model="message" placeholder="请输入">
+			<p>文本内容：{{message}}</p>
+		</div>
+	<!--多行文本-->
+	<div id="app-0">
+		<span>多行文本内容:</span>
+		<span style="white-space: pre">{{ message }}</span>
+		<br>
+		<textarea v-model="message" placeholder="多行文本"></textarea>
+	</div>
+	<!-- 单个勾选框 -->
+		<div id="app-2">
+			<input type="checkbox" id="checkbox" v-model="checked">
+			<label for="checkbox">{{ checked }}</label>
+		</div>
+	<!-- 多个勾选框绑定到同一数组 -->
+		<div id="app-3">
+			<input type="checkbox" id="checkboxjack" v-model="checkedNames" value="Jack">
+			<label for="checkboxjack">Jack</label>
+			<input type="checkbox" id="checkboxJohn" v-model="checkedNames" value="John">
+			<label for="checkboxJohn">John</label>
+			<input type="checkbox" id="checkboxMike" v-model="checkedNames" value="Mike">
+			<label for="checkboxMike">Mike</label>
+			<span>我是{{checkedNames}}</span>
+		</div>
+	 
+	<!-- 单选框 -->
+		<div id="app-4">
+			<input type="radio" id="man" value="man" v-model="sex">
+			<label for="man">man</label>
+			<input type="radio" id="woman" value="woman" v-model="sex">
+			<label for="woman">woman</label>
+			<span>选择的时是{{sex}}</span>
+		</div>
+	 
+	<!-- 单选列表 -->
+		<div id="app-5">
+			<select v-model="selected">
+				<option>A</option>
+				<option>B</option>
+				<option>C</option>
+			</select>
+			<span>我是{{selected}}</span>
+		</div>
+	 
+	<!-- 多选列表 绑定到数组-->
+		<div id="app-6">
+			<select v-model='selected' multiple>
+				<option>A</option>
+				<option>B</option>
+				<option>C</option>
+			</select>
+			<span>我选择了{{selected}}</span>
+		</div>
+		 
+	<!-- 动态选项用v-for渲染 通过v-bind绑定value-->
+		<div id="app-7">
+			<select v-model='selected'>
+				<option v-for="item in items" v-bind:value="item.value">
+					{{item.text}}
+				</option>
+			</select>
+			<!-- v-model后的selected必须出现在data中 -->
+			<span>选择的是{{selected}}</span>
+		</div>
+	 
+	<!-- 在默认情况下， v-model 在 input 事件中同步输入框的值与数据，但你可以添加一个修饰符 lazy ，从而转变为在 change 事件中同步： -->
+	 
+	<!-- 在 "change" 而不是 "input" 事件中更新 -->
+	<input v-model.lazy="msg" >
+	 
+	<!-- 如果想自动将用户的输入值转为 Number 类型（如果原值的转换结果为 NaN 则返回原值），可以添加一个修饰符 number 给 v-model 来处理输入值： -->
+	<input v-model.number="age" type="number">
+	<!-- 这通常很有用，因为在 type="number" 时 HTML 中输入的值也总是会返回字符串类型。.trim如果要自动过滤用户输入的首尾空格，可以添加.trim 修饰符到 v-model 上过滤输入： -->
+	<input v-model.trim="msg">
+	 
+	  
+	 <script type="text/javascript">
+	 	var app1=new Vue({
+			el:'#app-1',
+			data:{
+				message:''
+			}
+		});
+		var app0=new Vue({
+			el:'#app-0',
+			data:{
+				message:""
+			}
+		})
+		var app2=new Vue({
+			el:'#app-2',
+			data:{
+				checked:false
+			}
+		});
+		var app3=new Vue({
+			el:'#app-3',
+			data:{
+				checkedNames:[]
+			}
+		});
+		var app4=new Vue({
+			el:'#app-4',
+			data:{
+				sex:''
+			}
+		});
+		var app5=new Vue({
+			el:'#app-5',
+			data:{
+				selected:''
+			}
+		});
+		var app6=new Vue({
+			el:'#app-6',
+			data:{
+				selected:[]
+			}
+		});
+		var app7=new Vue({
+			el:'#app-7',
+			data:{
+				selected: 'A',
+				items:[
+					{ text: 'One', value: 'A' },
+					{ text: 'Two', value: 'B' },
+					{ text: 'Three', value: 'C' }
+				]
+			}
+		});
+	 </script>
+	</body>
+</html>

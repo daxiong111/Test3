@@ -2,24 +2,22 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>监听事件</title>
+		<title>方法事件处理器12</title>
 		<script type="text/javascript" src="js/vue.min.js"></script>
 	</head>
 	<body>
 		<div id="example-1">
-		  <button v-on:click="counter += 1">增加 1</button>
-		  <p>这个按钮被点击了 {{ counter }} 次。</p>
+			<button @click="doSomeThing">点我啊啊</button>
 		</div>
-		
-		<script type = "text/javascript">
+		<script type="text/javascript">
 			var example = new Vue({
 				el:"#example-1",
-				data:{
-					counter:0
+				methods:{
+					doSomeThing:function(){
+						alert("121212")
+					}
 				}
 			})
-			
-			
 		</script>
 	</body>
 </html>

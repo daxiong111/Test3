@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/vue.min.js"></script>
+        <title>vue的props实现父组件变化子组件一起变化</title>
+    </head>
+    <body>     
+    <div id="app1">
+        <input v-model="parentMsg" >  <!--input绑定实例中data中的message-->
+        <div >
+            <child :msg="parentMsg"></child> <!--子组件绑定实例中data中的message-->
+        </div>
+
+    </div>
+	<script>
+            Vue.config.debug = true;
+            Vue.component('child',{
+                props: ['msg'],   //VUE实例中myMessage 等价于my-message
+                template: '<span>{{msg}}</span>'
+            });
+            var vm = new Vue({
+                el: '#app1',
+                data:{
+                    parentMsg:'hello  you are a good boy!'
+                }
+            });
+        </script>
+    </body>
+
+    </html>
