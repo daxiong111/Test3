@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>入门实例</title>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+	</head>
+	<body>
+		<script>
+		var data = { a: 1 }
+		var vm = new Vue({
+			data:data
+		})
+		console.log(vm.a === data.a);
+		vm.a = 2
+		console.log(data.a) // -> 2
+		// ... 反之亦然
+		data.a = 3
+		console.log(vm.a); // -> 3
+		</script>
+	</body>
+</html>
