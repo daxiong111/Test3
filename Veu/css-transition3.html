@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>多组件的过渡</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="transition-components-demo">
+			<input type="radio" id="man" value="man" v-model="sex">
+			<label for="man">man</label>
+			<input type="radio" id="woman" value="woman" v-model="sex">
+			<label for="woman">woman</label>
+			<span>选择的时是{{sex}}</span>
+			<transition name="component-fade" mode="out-in">
+			  	<component v-bind:is="view"></component>
+			</transition>
+		</div>
+		<script type="text/javascript">
+			new Vue({
+			    el: '#transition-components-demo',
+			    data: {
+			    	sex:'',
+			    	view: 'v-a'
+			    },
+			    components: {
+			        'v-a': {
+			         template: '<div>Component A</div>'
+			    },
+			    	'v-b': {
+			        template: '<div>Component B</div>'
+			    }
+			  }
+			})
+		</script>
+	</body>
+</html>

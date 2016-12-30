@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>多组件的过渡</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+		<script type="text/javascript" src="js/velocity.min.js"></script>
+	</head>
+	<body>
+		<div id="dynamic-fade-demo">
+			Fade In: <input type="range" v-model = "fadeInDuration" min = "0" :max="maxFadeDuration" />
+			Fade Out: <input type="range" v-model = "fadeOutDuration" min = "0" :max="maxFadeDuration" />
+			<transition :css="false" @before-enter="beforeEnter" @enter="enter" @leave="leave">
+				<p v-if="show">Hello  Wlord</p>
+			</transition>
+			<button @click="stop = true">点击停止</button>
+		</div>
+		<script type="text/javascript">
+			new Vue({
+				el:"#dynamic-fade-demo",
+				 data: {
+				    show: true,
+				    fadeInDuration: 1000,
+				    fadeOutDuration: 1000,
+				    maxFadeDuration: 1500,
+				    stop: false
+				},
+				mounted:function(){
+					this.show = false
+				},
+				methods:{
+					beforeEnter:function(el){
+						el.style.opacity = 0
+					},
+					enter:function(el,done){
+						var vm = this
+						Velocity(el,
+							{opacity:1},
+							{
+								duration:this.fadeInDuration,
+								complete:function(){
+									done()
+									if(!vm.stop)vm.show = false
+								}
+							}
+						)
+					},
+					leave:function(el,done){
+						var vm = this
+						Velocity(el,
+							{opacity:0},
+							{
+								duration:this.fadeOutDuration,
+								complete:function(){
+									done()
+									vm.show = true
+								}
+							}
+						)
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

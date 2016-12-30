@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>深入响应式原理</title>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="example">
+			<my-component></my-component>
+		</div>
+		
+	<script type="text/javascript">
+		
+		Vue.component('my-component',{
+			 template: '<span>{{message}}</span>',
+			  data: function () {
+			    return {
+			      message: 'not updated'
+			    }
+			  },
+			  methods: {
+			    updateMessage: function () {
+			      this.message = 'updated'
+			      console.log(this.$el.textContent) // => '没有更新'
+			      this.$nextTick(function () {
+			        console.log(this.$el.textContent) // => '更新完成'
+			      })
+			    }
+			  }
+		})
+		new Vue({
+			el:'#example'
+		})
+	</script>
+	</body>
+</html>

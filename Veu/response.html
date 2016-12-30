@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>深入响应式原理</title>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="example">{{msg}}</div>
+	<script type="text/javascript">
+//	全局变量
+	var data = {a:1}
+    var vm=new Vue({
+        data:{
+         data:data
+        }
+    })
+    Vue.set(data,'b', 2);
+    console.log(data.b);
+    vm.$set(data,'c',6);
+    console.log(data.c);
+    
+    var example = new Vue({
+	  el: '#example',
+	  data: {
+	    msg: '123'
+	  }
+	})
+	example.msg = 'new message' // 修改数据
+	console.log(example.$el.textContent === 'new message');
+	//example.$el.textContent === 'new message' // false
+	Vue.nextTick(function () {
+	  //example.$el.textContent === 'new message' // true
+	  console.log(example.$el.textContent === 'new message');
+	})
+//	
+	</script>
+	</body>
+</html>

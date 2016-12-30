@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css过渡</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="demo">
+			<button @click="show=!show">展开和收起效果哦</button>
+			<transition name="bounce">
+				<p v-if="show">你看看我是谁哦</p>
+			</transition>
+		</div>
+		<script type="text/javascript">
+			new Vue({
+				el:"#demo",
+				data:{
+					show:true
+				}
+			})
+		</script>
+	</body>
+</html>

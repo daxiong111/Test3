@@ -1,0 +1,69 @@
+@charset "utf-8";
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .8s
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 1.0, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-active {
+  transform: translateX(10px);
+  opacity: 0;
+}
+#demo{
+	height: 200px;
+    width: 250px;
+    background: pink;
+}
+#demo p{
+	background: yellow;
+	text-align: center;
+}
+.bounce-enter-active{
+	animation: bounce-in .5s;
+}
+.bounce-leave-active{
+	animation: bounce-out .5s;
+}
+/*放大、缩小效果*/
+@keyframes bounce-in{
+	0%{
+		transform: scale(0);
+	}
+	50%{
+		transform: scale(1.2);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+@keyframes bounce-out{
+	0%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.2);
+	}
+	100%{
+		transform: scale(0);
+	}
+}
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-enter-active, .list-leave-active {
+  transition: all 1s;
+}
+.list-enter, .list-leave-active {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.flip-list-move{
+	transition: transform 1s;
+}
