@@ -1,0 +1,49 @@
+
+
+@media all and (min-width: 1px) and (max-width:1030px){	
+	}
+
+	
+@media all and (min-width: 1031px) and (max-width:1330px){       
+    }    
+
+
+	
+@media all and (min-width: 1px) and (max-width:1540px) { 
+	/*所有表格*/
+	table td { padding-left:8px !important;}
+
+	/*数据总览*/
+	.zdl_data span,.zdf_data span,.sjzl_year span { font-size:26px !important;}
+
+	/*下拉*/
+	.drop_box_1 .time_1,.drop_box_2 .time_1{ width:96px !important; margin:6px 6px !important;}
+	.drop_box_1 .time_2,.drop_box_2 .time_2{ width:158px !important;}
+	.drop_box_1 .time_1 i,.drop_box_2 .time_1 i { width:18px !important; font-size:13px !important;}
+	.drop_box_1 .select dt,.drop_box_2 .select dt{ width:76px !important;}
+	.drop_box_1 .select dd,.drop_box_2 .select dd { left:-20px !important;}
+	.drop_box_1 .dropdown_1,.drop_box_2 .dropdown_1{ width:76px !important;}
+	.drop_box_1 .time_2{ width:158px !important; margin:6px 6px !important;}  /*时间*/
+
+	/*查询结果*/
+	.cxjg_box li a{ width:100px !important;}
+
+	/*湖北省用电情况*/
+	.ydqk_data li a { width:90px !important;}
+	.chars_ydqk { width:76% !important;} /*地图*/
+	.table_ydqk { width:24% !important; } /*表格*/
+	} 
+
+
+	
+@media all and (min-width: 1541px) and (max-width:1730px) {
+	
+	}   
+
+
+
+@media all and (min-width: 1731px) and (max-width:2500px) {
+	
+	}   
+	
+	                             

@@ -1,0 +1,17 @@
+
+.nav_1{
+    background: -webkit-gradient(linear, left top, left bottom, from(#28303d), to(#273454));
+    background: -webkit-linear-gradient(top, #28303d, #273454);
+    background: -moz-linear-gradient(top, #28303d, #273454);
+    background: -ms-linear-gradient(top, #28303d, #273454);
+    background: -o-linear-gradient(top, #28303d, #273454);
+    background: linear-gradient(top, #28303d, #273454);
+} /*背景*/
+.nav_2{
+    background: -webkit-gradient(linear, left top, left bottom, from(#7b8cc0), to(#3e5080));
+    background: -webkit-linear-gradient(top, #7b8cc0, #3e5080);
+    background: -moz-linear-gradient(top, #7b8cc0, #3e5080);
+    background: -ms-linear-gradient(top, #7b8cc0, #3e5080);
+    background: -o-linear-gradient(top, #7b8cc0, #3e5080);
+    background: linear-gradient(top, #7b8cc0, #3e5080);
+} /*背景*/

@@ -1,0 +1,12 @@
+
+
+*{ font-family: "微软雅黑","Microsoft Yahei","华文细黑","Hiragino Sans GB",tahoma,arial,"宋体"; box-sizing: border-box; }
+p,body,ul,li,h1,dl,dd,h2{ margin:0; padding:0;} 
+p,a,h1,h2,h3,input,li,button,dl,dt,th{ font-size:13px; color:#cbddfd;}
+a,h1,h2,dl,dt,dd,th{  text-decoration:none; font-weight:normal; }
+img,input,button,dl,dt,dd{ border:none 0; background-color:transparent;  list-style-type:none;}
+ul,li{ list-style:none;}
+input,button{ outline: none;}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {display: block;}
+html, body { min-height:100%; }
+i{ font-style:normal;}

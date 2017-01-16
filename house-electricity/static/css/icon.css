@@ -1,0 +1,38 @@
+.icon:before { font-family:'icon'; font-style:normal; speak: none; font-weight: normal; -webkit-font-smoothing:antialiased; -moz-font-smoothing:antialiased; font-smoothing:antialiased; }  /*菜单图标字体*/
+@font-face {
+	font-family:'icon';
+	src:url('../fonts/icon.eot');
+	src:url('../fonts/icon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icon.svg#iconic') format('svg'),
+		url('../fonts/icon.woff') format('woff'),
+		url('../fonts/icon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+ /*字体定位*/
+.icon-chat_1:before {content: "\0021";}  
+.icon-chat_2:before {content: "\0022";}  
+.icon-chat_3:before {content: "\0023";}  
+.icon-chat_4:before {content: "\0024";}  
+.icon-chat_5:before {content: "\0025";}  
+.icon-chat_6:before {content: "\0026";}  
+.icon-chat_7:before {content: "\0027";}  
+.icon-chat_8:before {content: "\0028";}  
+.icon-chat_9:before {content: "\0029";}  
+.icon-chat_10:before {content: "\002A";}  
+.icon-chat_11:before {content: "\002B";}  
+.icon-chat_12:before {content: "\002C";}  
+.icon-chat_13:before {content: "\002D";}  
+.icon-chat_14:before {content: "\002E";}  
+.icon-chat_15:before {content: "\002F";}  
+.icon-chat_16:before {content: "\0030";}  
+.icon-chat_17:before {content: "\0031";}  
+.icon-chat_18:before {content: "\0032";}  
+.icon-chat_19:before {content: "\0033";}  
+.icon-chat_20:before {content: "\0034";}  
+.icon-chat_21:before {content: "\0035";}  
+.icon-chat_22:before {content: "\0036";}  
+.icon-chat_23:before {content: "\0037";}  
+.icon-chat_24:before {content: "\0038";}  
+ /*字体定位*/
