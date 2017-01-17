@@ -1,0 +1,190 @@
+
+/*三大列*/
+.col_5,.col_6{ float:left;}
+.col_5,.col_6{ width:50%;}
+
+
+
+
+/*湖北省用电量、电费统计********************************************************************************/
+/*表格*/
+.tj_table{ height:342px;}
+.tj_table td{ height:30px;}
+.tj_table .table_title td{ background:#556698 !important; height:50px !important;}
+.tj_table .ydl_color a{ display:block; white-space:normal; line-height:20px; font-size:12px;}
+.tj_table .ydl_color p{ float:left; width:65px; line-height:20px; font-size:12px; text-indent:4px !important;}
+.tj_table .ydl_color span{ float:left; width:7px; height:7px; margin-top:6px;}/*色块*/
+.tj_table .jm_color{ background:#97bbff;}
+.tj_table .sy_color{ background:#d3798e;}
+.tj_table .gy_color{ background:#ffc77c;}
+/*表格*/
+
+/*进度条*/
+.progre{ overflow:hidden; width:93%; height:21px; border-radius:2px; border:solid 1px #acbcee; }
+.progre li{ height:100%; float:left; font-size:12px; font-family: Arial, Helvetica, sans-serif; line-height:19px; text-indent:5px;}
+.pro_jm{ color:#2e3b5d;
+background-color: #8999c8;
+background: -webkit-gradient(linear, left top, left bottom, from(#8999c8), to(#6174b3));
+background: -webkit-linear-gradient(top, #8999c8, #6174b3);
+background: -moz-linear-gradient(top, #8999c8, #6174b3);
+background: -ms-linear-gradient(top, #8999c8, #6174b3);
+background: -o-linear-gradient(top, #8999c8, #6174b3);
+background: linear-gradient(top, #8999c8, #6174b3);
+}
+.pro_sy{ color:#751827;
+background-color: #d47c91;
+background: -webkit-gradient(linear, left top, left bottom, from(#d47c91), to(#c45668));
+background: -webkit-linear-gradient(top, #d47c91, #c45668);
+background: -moz-linear-gradient(top, #d47c91, #c45668);
+background: -ms-linear-gradient(top, #d47c91, #c45668);
+background: -o-linear-gradient(top, #d47c91, #c45668);
+background: linear-gradient(top, #d47c91, #c45668);
+}
+.pro_gy{ color:#814900;
+background-color: #ffcd8a;
+background: -webkit-gradient(linear, left top, left bottom, from(#ffcd8a), to(#f0a748));
+background: -webkit-linear-gradient(top, #ffcd8a, #f0a748);
+background: -moz-linear-gradient(top, #ffcd8a, #f0a748);
+background: -ms-linear-gradient(top, #ffcd8a, #f0a748);
+background: -o-linear-gradient(top, #ffcd8a, #f0a748);
+background: linear-gradient(top, #ffcd8a, #f0a748);
+}
+/*湖北省用电量、电费统计********************************************************************************/
+
+
+
+
+/*湖北省用电排行榜********************************************************************************/
+/*表格*/
+.phb_table tbody{ width:50%; float:left;}
+.phb_table td{ height:25px !important; line-height:25px !important;}
+.phb_table .table_title td{ background: #51618f !important; height:25px !important;}
+/*表格*/
+
+/*下拉选择*/
+.drop_box_1{ width:100%; height:52px;  background:#556698; border-bottom:solid 1px #677ca8;}
+.left_drop{ padding-top:8px; padding-bottom:8px; float:left; padding-left:8px; width:80%;}
+.left_drop .time_1{ float:left; width:110px; height:24px; background:#3d4f7f; border:solid 1px #283b67;  border-radius:1px; margin:6px 8px; cursor:pointer;}
+.left_drop .time_line{ float:left; width:8px; height:2px; background:#283b67; margin:16px -3px;}  /*开始、结束时间中间的线*/
+.left_drop .time_1:hover{ border:solid 1px #8aa4e0;}
+.left_drop .time_1 i{ float:left; width:24px; height:22px; line-height:19px; font-size:16px; text-align:center;   border-right: solid 1px #283b67;  color:#97bbff;} /*左边时间图标*/
+.time_start,.time_end{ font-size:12px !important; width:32px !important;}  /*开始时间*/
+.left_drop .time_1 dt p{ height:23px; line-height:22px; text-indent:8px;  color:#97bbff;}
+.select i{ float:right; font-size:12px; width:22px; height:23px; line-height:20px; border-left: solid 1px #283b67;  color:#97bbff; cursor:pointer;} /*右边下拉三角图标*/
+.select{ position:relative; float:left; }
+.select dt{ width:84px; height:23px; line-height:22px; font-size:12px; background:url(../images/time.png) no-repeat 58px center; cursor:pointer; white-space:nowrap; text-overflow: ellipsis; overflow:hidden; position:relative; text-indent:6px;color: #97bbff;}
+.select dt span{ font-family:Arial, Helvetica, sans-serif !important; margin-right:5px; }
+.select dd{ position:absolute; left:-25px; top:24px; z-index:1;}
+.select dd .dropdown_1{ width:110px; max-height:194px; overflow:auto; border:solid 1px #7087b3; border-radius:2px; z-index:1;}
+.select dd > ul > li { width:100%; height:24px; background:#2a3a62;}
+.select dd > ul > li > a{ width:100%; height:24px; line-height:24px; display:block; padding:0 8px; color:#798bbe;  text-indent:6px; font-size:12px;}
+.select dd > ul > li > a > span{ font-family:Arial, Helvetica, sans-serif !important;  margin-right:5px;}
+.select dd > ul > li > a:hover { background:#a7b8e9; cursor:pointer; color:#2a3a62;}
+/*下拉选择*/
+
+/*按钮*/
+.right_btn{ float:right; width:20%; padding-right:15px; padding-top:8px;}
+.right_btn li{ width:100%; height:24px; border-radius:3px; margin:6px 0; text-align:center; line-height:22px; font-size:12px; cursor:pointer;}
+.right_btn li:hover{ border:solid 1px rgba(255,255,255,0.5);} /*查询按钮*/
+.right_btn .djcx{ float:left; background:url(../images/bg_3.jpg) repeat !important; border:solid 1px #672844; color:#4a1331; text-shadow:0px 1px 0px #d58fa7 !important;} /*查询按钮*/
+.right_btn .djcx_close{ background:url(../images/bg_5.jpg) repeat !important; border:solid 1px #3d363a !important; color:#3d363a;  text-shadow:0px 1px 0px #b1a1a8 !important;}
+/*按钮*/
+.phb_chars{ height:490px;}
+.chars_phb_top{ display:block; overflow:hidden; padding:5px 15px; float:right;}  /*单位标注*/
+/*湖北省用电排行榜********************************************************************************/
+
+
+
+
+
+/*卫仕预测方法精准性测试********************************************************************************/
+.left_drop_cs{ width:60% !important; }
+
+/*测试按钮*/
+.right_btn_yc{ width:40% !important; }
+.btn_yc_1,.btn_yc_2{ float:right !important; width:40% !important; margin-left:5px !important; background: url(../images/bg_3.jpg) repeat !important; border: solid 1px #672844;color: #4a1331; text-shadow: 0px 1px 0px #d58fa7 !important; } 
+/*预测按钮*/
+
+.cs_date{ overflow:hidden; height:44px; background:#2a3a62; border:1px solid #6176a4; margin:10px 15px; padding:8px 10px;} /*三组测试数据*/
+.cxjg_title{ height:20px; line-height:20px; margin-top:8px; margin-bottom:-5px; text-indent:15px;}
+/*三组数据*/
+.cs_date li{ float:left; width:33.333%; }
+.cs_date li p{ float:left; line-height:24px; font-size:12px;}
+.cs_date li a{ float:left; width:126px; height:24px; background:#3d4f7f; border:solid 1px #51618f; text-indent:10px; border-radius: 1px; font-family:Arial, Helvetica, sans-serif; line-height:22px;}
+.cs_date li span{ float:left; line-height:24px; margin-left:4px; font-size:12px;}
+.cs_date li i{ display:none; float:left; width:1px; height:24px; background:#7087b3;}
+/*三组数据*/
+
+/*测试表格*/
+.padd_cs2{ overflow:hidden;}
+.cs1_table{ width:100%;}
+.cs2_table{ width:100%; margin-top:4px;}
+.cs1_table td,.cs2_table td{}
+.cs1_table .table_title td{ background:#556698;}/*测试表格1*/
+.cs2_table .table_title td{ background:#556698;}/*测试表格2*/
+/*测试表格*/
+
+/*输入框*/
+.cs1_data_box td,.cs2_data_box td{ padding-left:0px !important;}
+.cs1_table_data li,.cs2_table_data li{ width:100%; overflow:hidden; padding:3px; border-bottom:solid 1px #6176a4;}   /*参数*/
+.cs1_table_data li a,.cs2_table_data li a{ overflow:hidden; float:left; width:30%; height:24px;  background:#2a3a62; border:solid 1px #51618f; border-radius:1px;}   /*参数框*/
+.cs1_table_data li p,.cs2_table_data li p{ float:left; width:60%; height:24px;  background:#2a3a62; border:solid 1px #51618f; border-radius:1px;  text-indent:4px; font-size:12px; line-height:22px; color:#97bbff; margin-left:2px; }  /*参数结果*/
+.cs1_table_data li input,.cs2_table_data li input{ width:100%; height:100%; text-indent:4px; font-size:12px; line-height:20px; color:#97bbff;  float:left; }  /*参数框*/
+.cs1_table_data i,.cs2_table_data i{ display:block; float:left; width:16px; height:24px; font-size:12px; background:#8298c6; border-radius:1px; color:#2a3a62; text-align:center; line-height:22px; border:solid 1px #2a3a62; font-family:Arial, Helvetica, sans-serif;}
+/*输入框*/
+
+/*表格里面的按钮*/
+.cs_btn{ display:block; width:100%; height:24px; line-height:22px; text-align:center; margin-left:-5px; background:url(../images/bg_4.jpg) repeat !important; border:solid 1px #0e4035; color:#08352c; text-shadow:0px 1px 0px #80c6ab !important;     border-radius:3px; margin:3px 0;}
+.cs_btn:hover{ border:solid 1px rgba(255,255,255,0.5); cursor:pointer;}
+/*表格里面的按钮*/
+/*卫仕预测方法精准性测试********************************************************************************/
+
+
+
+/*用电预测********************************************************************************/
+/*左边按钮*/
+.left_btn{ float:left; width:20%; padding-left:15px; padding-top:8px;}
+.left_btn li{ width:100%; height:24px; border-radius:3px; margin:6px 0; text-align:center; line-height:22px; font-size:12px; cursor:pointer;}
+.left_btn li:hover{ border:solid 1px rgba(255,255,255,0.5);} /*查询按钮*/
+.left_btn .yjsc{ float:left; background:url(../images/bg_2.jpg) repeat !important; border:solid 1px #283b67; color:#13244a; text-shadow: 0px 1px 0px #8ca3d3 !important;} /*查询按钮*/
+
+/*测试按钮*/
+.right_btn_yc{ width:40% !important; }
+.btn_yc_1,.btn_yc_2{ float:right !important; width:40% !important; margin-left:5px !important; background: url(../images/bg_3.jpg) repeat !important; border: solid 1px #672844;color: #4a1331; text-shadow: 0px 1px 0px #d58fa7 !important; } 
+/*预测按钮*/
+
+/*表格*/
+.yc_table{ width:100%; margin-top:4px;}
+.yc_table td{ height:68px;}
+.yc_table .table_title td{ height:31px;background: #556698;}
+/*表格*/
+
+/*输入框*/
+.time_cs{  width:100%;}
+.time_cs li{ float:left; overflow:hidden; width:20%; background:#2a3a62; border:solid 1px #51618f; border-radius:1px; margin-left:-5px !important; margin-right:5px !important; width: 33.333%; margin:2px 0;} 
+.time_cs li input{ width:100%; height:100%; text-indent:4px; font-size:12px; line-height:20px; color:#97bbff;  float:left; font-family:Arial, Helvetica, sans-serif;}
+.time_cs li p{ float:right; width:26px; height:22px; text-align:center; line-height:22px; border-left:solid 1px #51618f; color:#97bbff;}
+.time_cs li i{  float:left; display:block; width:18px; height:22px; background:#8298c6; border-radius:1px; color:#2a3a62; text-align:center; line-height:22px; border:solid 1px #2a3a62; font-family:Arial, Helvetica, sans-serif;}
+.time_cs li a{ width:70%; float:left; height:22px; overflow:hidden; }
+/*输入框*/
+
+/*电器*/
+.tag{ overflow:hidden;}
+.tag li{ float:left;}
+.tag li label{float:left;  margin-top:3px;}
+.tag li input{float:left;}
+.tag li p{ float:left; height:22px; line-height:22px; font-size:12px; margin-left:3px;  margin-right:8px}
+/*电器*/
+/*用电预测********************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+

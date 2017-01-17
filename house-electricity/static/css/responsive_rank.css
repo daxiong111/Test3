@@ -1,0 +1,38 @@
+
+
+@media all and (min-width: 1px) and (max-width:1030px){	
+	}
+
+	
+@media all and (min-width: 1031px) and (max-width:1330px){       
+    }    
+
+
+	
+@media all and (min-width: 1px) and (max-width:1540px) { 
+/*所有表格*/
+table td{ padding-left:8px !important;}
+
+/*卫仕预测方法精准性测试*/
+.cs_date li a{ width:90px;}
+
+.cs1_table_data li a,.cs2_table_data li a{ width:29%}
+.cs1_table_data li p,.cs2_table_data li p{ width:59%}
+
+/*用电预测*/
+.time_cs li a { width:65%;}
+
+    }   
+
+
+	
+@media all and (min-width: 1541px) and (max-width:1730px) {
+	
+	}   
+
+
+
+@media all and (min-width: 1731px) and (max-width:2500px) {
+	
+	}  
+	                             
