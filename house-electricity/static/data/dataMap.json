@@ -1,0 +1,22 @@
+{
+  "resultObj": [
+    { "name": "武汉市", "value": 120},
+    { "name": "鄂州市", "value": 320},
+    { "name": "黄石市", "value": 195 },
+    { "name": "咸宁市", "value": 112},
+    { "name": "襄樊市", "value": 60},
+    { "name": "黄冈市", "value": 500 },
+    { "name": "荆州市", "value": 707},
+    { "name": "襄阳市", "value": 50},
+    { "name": "十堰市", "value": 1120},
+    { "name": "孝感市", "value": 1901},
+    { "name": "宜昌市", "value": 210},
+    { "name": "随州市", "value": 190},
+    { "name": "神农架林区", "value": 230},
+    { "name": "荆门市", "value": 107},
+    { "name": "潜江市", "value": 303},
+    { "name": "天门市", "value": 620 },
+    { "name": "仙桃市", "value": 730 },
+    { "name": "恩施土家族苗族自治州", "value": 300}
+  ]
+}

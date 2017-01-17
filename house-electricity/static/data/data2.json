@@ -1,0 +1,13 @@
+{
+  "resultObj": [
+    {"firstName":"武汉","firstMount":"800","lastName":"十堰","lastMount":"800"},
+    {"firstName":"十堰","firstMount":"800","lastName":"黄石","lastMount":"800"},
+    {"firstName":"黄石","firstMount":"800","lastName":"荆州","lastMount":"800"},
+    {"firstName":"襄阳","firstMount":"800","lastName":"荆门","lastMount":"800"},
+    {"firstName":"孝感","firstMount":"800","lastName":"宜昌","lastMount":"800"},
+    {"firstName":"荆州","firstMount":"800","lastName":"武汉","lastMount":"800"},
+    {"firstName":"鄂州","firstMount":"800","lastName":"仙桃","lastMount":"800"},
+    {"firstName":"黄冈","firstMount":"800","lastName":"潜江","lastMount":"800"},
+    {"firstName":"仙桃","firstMount":"800","lastName":"潜江","lastMount":"800"}
+  ]
+}
