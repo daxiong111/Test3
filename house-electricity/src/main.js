@@ -3,12 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 
-// import VueRouter from 'vue-router'
-// Vue.use(VueRouter);
-// Vue.config.debug = true;
 import VueResource from 'vue-resource';
 Vue.use(VueResource);
 
+// import Pickaday from 'pikaday';
+// Vue.use(Pickaday);
+// Vue.directive('pikaday', require('./directives/pikaday'));
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

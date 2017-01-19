@@ -11,7 +11,7 @@
 <script>
 export default {
   name: 'hello',
-  data:function () {
+  data () {
     return {
       items: [
           { message: '首页' },

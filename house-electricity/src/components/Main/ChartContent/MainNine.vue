@@ -5,13 +5,13 @@
 import echarts from 'echarts'
 export default {
     name: 'MainNine',
-    data: function () {
+    data () {
         return {
             chart: null,
             data:[]
         }
     },
-    created: function() {
+    created () {
         const url = "static/data/dataMap.json";
         this.$http.get(url).then(function(data){
             const JsonArr=data.body.resultObj;

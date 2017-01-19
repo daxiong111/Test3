@@ -5,18 +5,18 @@
 import echarts from 'echarts';
 export default {
     name: 'MainTen',
-    data: function () {
+    data () {
         return {
             chart: null,
             floor:[],
             number:[]
         }
     },
-    created: function() {
-        var url="static/data/data.json";
+    created () {
+        const url = "static/data/data.json";
         this.$http.get(url).then(function(data){
-            var json=data.body.resultObj.floor;
-            var jsonD=data.body.resultObj.number;
+            const json=data.body.resultObj.floor;
+            const jsonD=data.body.resultObj.number;
             this.$set(this, 'floor', json);
             this.$set(this, 'number', jsonD);
             this.drawMain10('main10');

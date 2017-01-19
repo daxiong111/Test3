@@ -23,32 +23,11 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>武汉</td><td>800</td><td>武汉</td><td>800</td>
-                                </tr>
-                                <tr>
-                                    <td>黄石</td><td>800</td><td>黄石</td><td>800</td>
-                                </tr>
-                                <tr>
-                                    <td>十堰</td><td>800</td><td>十堰</td><td>800</td>
-                                </tr>
-                                <tr>
-                                    <td>荆州</td><td>800</td><td>荆州</td><td>800</td>
-                                </tr>
-                                <tr>
-                                    <td>宜昌</td><td>800</td><td>宜昌</td><td>800</td>
-                                </tr>
-                                <tr>
-                                    <td>襄阳</td><td>800</td><td>襄阳</td><td>800</td>
-                                </tr>
-                                <tr>
-                                    <td>鄂州</td><td>800</td><td>鄂州</td><td>800</td>
-                                </tr>
-                                <tr>
-                                    <td>荆门</td><td>800</td><td>荆门</td><td>800</td>
-                                </tr>
-                                <tr>
-                                    <td>黄冈</td><td>800</td><td>黄冈</td><td>800</td>
+                                <tr v-for="(item, index) in items">
+                                    <td>{{item.firstName}}</td>
+                                    <td>{{item.firstMount}}</td>
+                                    <td>{{item.lastName}}</td>
+                                    <td>{{item.lastMount}}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -61,7 +40,7 @@
 <script>
     export default {
         name: 'ContentThird',
-        data: function () {
+        data () {
             return {
                 checked: 0,
                 msg:"地区",
@@ -70,11 +49,22 @@
                 tabs: [
                     {name: "最大负荷排名", id: '0'},
                     {name: "最小负荷排名", id: '1'}
-                ]
+                ],
+                items:[]
             }
         },
+        created () {
+            const url = "static/data/data2.json";
+            this.$http.get(url).then(function(data){
+                const JsonArr=data.body.resultObj;
+                this.$set(this, 'items',JsonArr);
+//                console.log(this.items)
+            },function(response){
+                console.info(response);
+            })
+        },
         methods: {
-            tabChange: function (index) {
+            tabChange (index) {
                 this.checked = index;
             }
         }

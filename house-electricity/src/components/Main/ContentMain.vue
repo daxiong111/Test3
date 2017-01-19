@@ -3,6 +3,9 @@
         <div class="matter">
             <div class="container">
                 <content-left></content-left>
+                <content-second></content-second>
+                <content-third></content-third>
+                <content-four></content-four>
             </div>
         </div>
     </main>
@@ -10,11 +13,14 @@
 
 <script>
     import ContentLeft from './ContentLeft'
+    import ContentSecond from './ContentSecond'
+    import ContentThird from './ContentThird'
+    import ContentFour from './ContentFour'
 
     export default {
         name: 'ContentMain',
         components: {
-            ContentLeft
+            ContentLeft,ContentSecond,ContentThird,ContentFour
         }
     }
 </script>

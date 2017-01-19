@@ -15,3 +15,60 @@
     background: -o-linear-gradient(top, #7b8cc0, #3e5080);
     background: linear-gradient(top, #7b8cc0, #3e5080);
 } /*背景*/
+.switch_btn li:hover{
+    background-color: #4c5e8f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#7b8cc0), to(#4c5e8f));
+    background: -webkit-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: -moz-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: -ms-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: -o-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: linear-gradient(top, #7b8cc0, #4c5e8f);
+}
+.switch_btn .switch_btn_click{
+    background-color: #4c5e8f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#7b8cc0), to(#4c5e8f));
+    background: -webkit-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: -moz-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: -ms-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: -o-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: linear-gradient(top, #7b8cc0, #4c5e8f);
+} /*切换按钮点击*/
+/*最大负荷排名、最小负荷排名********************************************************************************/
+/*选项卡按钮*/
+.fh_tab li:hover{
+    background-color: #4c5e8f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#7b8cc0), to(#4c5e8f));
+    background: -webkit-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: -moz-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: -ms-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: -o-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: linear-gradient(top, #7b8cc0, #4c5e8f);
+}
+.fh_tab_click{
+    background-color: #4c5e8f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#7b8cc0), to(#4c5e8f));
+    background: -webkit-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: -moz-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: -ms-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: -o-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: linear-gradient(top, #7b8cc0, #4c5e8f);
+}
+/*选项卡按钮地图*/
+.switch_btn li:hover{
+    background-color: #4c5e8f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#7b8cc0), to(#4c5e8f));
+    background: -webkit-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: -moz-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: -ms-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: -o-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: linear-gradient(top, #7b8cc0, #4c5e8f);
+} /*切换按钮经过*/
+.switch_btn .switch_btn_click{
+    background-color: #4c5e8f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#7b8cc0), to(#4c5e8f));
+    background: -webkit-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: -moz-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: -ms-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: -o-linear-gradient(top, #7b8cc0, #4c5e8f);
+    background: linear-gradient(top, #7b8cc0, #4c5e8f);
+} /*切换按钮点击*/

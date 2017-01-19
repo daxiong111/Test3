@@ -24,7 +24,7 @@
 <script>
 export default {
   name: 'CompNav',
-  data:function () {
+  data () {
     return {
       datas: [
          {label: '实时数据',iconA:'icon',iconB:'icon-chat_5'},

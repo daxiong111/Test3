@@ -5,8 +5,8 @@
             <div class="drop_box drop_box_2">
                 <ul class="left_drop">
                     <li class="time_1 time_2">    <!--开始时间-->
-                        <i class="icon icon-chat_21"></i>
-                        <input value="2016-01-01" id="demo2">
+                        <label for="demo2"><i class="icon icon-chat_21"></i></label>
+                        <input id="demo2" placeholder="2016-01-01" v-pikaday="chineseDate" format="YYYY-MM-DD">
                     </li>
                     <li class="time_line"></li>   <!--起始时间连接线-->
                     <li class="time_1 time_2">    <!--结束时间-->
@@ -15,22 +15,23 @@
                     </li>
                     <li class="time_1">    <!--下拉时间_月-->
                         <i class="icon icon-chat_14"></i>
-                        <select class="select-xl" v-model='selected'>
-                            <option v-for="item in items" v-bind:value="item.value" >
+                        <select id="sel" class="select-xl" v-model='selected'>
+                            <option v-for="item in items" :value="item.value" >
                                 {{item.text}}
                             </option>
                         </select>
                     </li>
                     <li class="time_1">    <!--下拉时间_月-->
                         <i class="icon icon-chat_24"></i>
-                        <select class="select-xl" v-model='selected1'>
-                            <option v-for="item in items" v-bind:value="item.value" >
+                        <select id="sel1" class="select-xl" v-model='selected1'>
+                            <option v-for="item in items" :value="item.value" >
                                 {{item.text}}
                             </option>
+                        </select>
                     </li>
                 </ul>
                 <ul class="right_btn">
-                    <li class="djcx">点击查询</li>
+                    <li class="djcx" @click="getSearch">点击查询</li>
                 </ul>
             </div>
             <div class="padd">
@@ -44,22 +45,30 @@
     </div>
 </template>
 <script>
-    import MainTen from './ChartContent/Mainten'
+    import MainTen from './ChartContent/MainTen'
     export default {
         name: 'ContentRange',
         components: {
             MainTen
         },
-        data: function () {
+        data () {
             return {
                 msg:'园区楼宇用电排行',
                 msg1:'X：时间   Y：功率（单位：W）',
                 selected: 'A',
                 selected1: 'A',
+                chineseDate: '',
                 items:[
                     { text: '电费', value: 'A' },
                     { text: '电量', value: 'B' }
                 ],
+            }
+        },
+        methods:{
+            getSearch (){
+                const op = document.getElementById("sel").value;
+                const op1 = document.getElementById("sel").value;
+                alert(op+" "+op1)
             }
         }
     }

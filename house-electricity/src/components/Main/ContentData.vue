@@ -38,7 +38,7 @@ export default {
     components: {
         MainSeven,MainEight
     },
-    data: function () {
+    data () {
         return {
             msg: '数据总览',
             msg1:'总电量',

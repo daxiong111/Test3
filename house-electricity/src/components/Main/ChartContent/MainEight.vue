@@ -5,7 +5,7 @@
 import echarts from 'echarts'
 export default {
     name: 'MainEight',
-    data: function () {
+    data () {
         return {
             chart: null
         }

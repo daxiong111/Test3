@@ -50,7 +50,7 @@ export default {
   components: {
       MainOne
   },
-  data: function () {
+  data () {
      return {
         msg: '电力供给图',
         msg1:'X：时间   Y：功率（单位：W）',
@@ -83,13 +83,13 @@ export default {
         }
     },
     methods:{
-        toggleFinish:function(index){
+        toggleFinish(index){
             this.checked=index;
         },
-        getSearch:function(){
+        getSearch (){
             const op = document.getElementById("op2").value;
             const op1 = document.getElementById("op3").value;
-            console.log(op,op1);
+//            console.log(op,op1);
             alert(op+" "+op1)
         }
     }

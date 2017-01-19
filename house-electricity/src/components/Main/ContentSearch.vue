@@ -96,7 +96,7 @@
 <script>
     export default {
         name: 'ContentSearch',
-        data: function () {
+        data () {
             return{
                 msg:'智能查询',
                 msg1:'查询结果：',
@@ -123,11 +123,10 @@
             }
         },
         methods:{
-            getSearch:function(){
+            getSearch (){
                 const op = document.getElementById("op").value;
                 const op1 = document.getElementById("op1").value;
-               console.log(op);
-               console.log(op1);
+                alert(op+" "+op1)
             }
         }
     }

@@ -41,7 +41,7 @@
         components: {
             MainNine
         },
-        data: function () {
+        data () {
             return {
                 checked:0,
                 tabs:[
@@ -53,7 +53,7 @@
                 items:[]
             }
         },
-        created: function() {
+        created () {
             const url = "static/data/mapTable.json";
             this.$http.get(url).then(function(data){
                 const JsonArr=data.body.resultObj;
@@ -64,7 +64,7 @@
             })
         },
         methods:{
-            tabChange:function(index){
+            tabChange(index){
                 this.checked = index;
             }
         }

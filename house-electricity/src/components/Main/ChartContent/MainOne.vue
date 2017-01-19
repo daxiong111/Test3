@@ -5,7 +5,7 @@
 import echarts from 'echarts'
 export default {
     name: 'MainOne',
-    data: function () {
+    data () {
         return {
             chart: null,
             fee:[],
@@ -13,7 +13,7 @@ export default {
             number:[]
         }
     },
-    created: function() {
+    created () {
         const url = "static/data/data1.json";
         this.$http.get(url).then(function(data){
             const JsonD=data.body.resultObj.year;
